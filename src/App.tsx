@@ -3,6 +3,8 @@ import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import {OnOff} from './components/OnOff/OnOff';
+import UnControlledAccordion from './components/UnControlledAccordion/UnControlledAccordion';
+import UncontrRating from './components/UncontrRating/UncontrRating';
 
 
 function Hello() {
@@ -20,6 +22,15 @@ function App() {
 
   return (
     <div>
+      <OnOff/>
+      <OnOff/>
+      <OnOff/>
+
+      <UnControlledAccordion titleValue={"Menu"}/>
+      <UnControlledAccordion titleValue={"Users"}/>
+
+      <UncontrRating/>
+
 
       {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
       {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
@@ -30,9 +41,6 @@ function App() {
       {/*<Rating value={4}/>*/}
       {/*<Rating value={5}/>*/}
 
-        <OnOff/>
-        <OnOff/>
-        <OnOff/>
 
     </div>
   );

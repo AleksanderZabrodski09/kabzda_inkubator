@@ -1,4 +1,5 @@
 import React from "react";
+import UncontrRating from '../UncontrRating/UncontrRating';
 
 type RatingPropsType = {
     value: 0 | 1 | 2 | 3 | 4 | 5 //number
@@ -21,7 +22,7 @@ function Star(props: StarPropsType) {
 }
 
 export function Rating(props: RatingPropsType) {
-    console.log("Rating rendering");
+    console.log("UncontrRating rendering");
         return (
             <div>
                 <Star selected={props.value > 0}/>
@@ -32,3 +33,4 @@ export function Rating(props: RatingPropsType) {
             </div>
         );
     }
+export default Rating
