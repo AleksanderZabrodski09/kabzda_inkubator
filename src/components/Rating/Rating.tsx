@@ -21,7 +21,7 @@ function Star(props: StarPropsType) {
 }
 
 export function Rating(props: RatingPropsType) {
-    console.log("Rating rendering");
+    console.log("UnControlledRating rendering");
         return (
             <div>
                 <Star selected={props.value > 0}/>
