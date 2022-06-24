@@ -25,7 +25,7 @@ function App() {
         <OnOff/>
         <OnOff/>
       <UnControlledAccordion titleValue={"Menu"} />
-      <UnControlledRating/>
+      <UnControlledRating />
 
       {/*<UnControlledAccordion titleValue={"Users"} collapsed={false}/>*/}
       {/*<UnControlledRating value={0}/>*/}
