@@ -1,10 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from './components/OnOff/OnOff';
-import UnControlledAccordion from './components/UnControlledAccordion/UnControlledAccordion';
-import {UnControlledRating} from './components/UnControlledRating/UnControlledRating';
+import Accordion from './components/Accordion/Accordion';
 
 
 function Hello() {
@@ -19,13 +17,19 @@ function App() {
   //полезное что-то
   // обязана вернуть JSX
 
-
+let [ratingValue, setRatingValue]=useState<RatingValueType>(4)
+  let [collapsed, setCollapsed]=useState(false)
   return (
     <div>
         <OnOff/>
         <OnOff/>
-      <UnControlledAccordion titleValue={"Menu"} />
-      <UnControlledRating />
+
+      <Rating value={ratingValue} onClick={setRatingValue}
+      />
+      <Accordion titleValue={"Menu"} collapsed={collapsed} onClick={()=>setCollapsed(!collapsed)}/>
+
+      {/*<UnControlledAccordion titleValue={"Menu"} />*/}
+      {/*<UnControlledRating />*/}
 
       {/*<UnControlledAccordion titleValue={"Users"} collapsed={false}/>*/}
       {/*<UnControlledRating value={0}/>*/}
