@@ -29,7 +29,7 @@ export function Rating(props: RatingPropsType) {
 
 
 function Star(props: StarPropsType) {
-  console.log("Star rendering")
+  // console.log("Star rendering")
   return <span onClick={props.onClick}>{props.selected ? <b>Star </b> : ' Star '}</span>
 
 

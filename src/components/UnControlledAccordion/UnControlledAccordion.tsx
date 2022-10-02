@@ -6,7 +6,7 @@ type AccordionPropsType = {
 }
 
 function UnControlledAccordion(props: AccordionPropsType) {
-  console.log("UnControlledAccordion rendering");
+  // console.log("UnControlledAccordion rendering");
   let [collapsed, setCollapsed] = useState<boolean>(false) ;
   return (
     <div>
@@ -26,7 +26,7 @@ type AccordionTitlePropsType = {
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-  console.log("AccordionTitle rendering");
+  // console.log("AccordionTitle rendering");
   return (
     <div>
       <h3 onClick={()=>{props.onClick()}}>{props.title}</h3>
@@ -36,7 +36,7 @@ function AccordionTitle(props: AccordionTitlePropsType) {
 
 
 function AccordionBody() {
-  console.log("AccordionBody rendering");
+  // console.log("AccordionBody rendering");
   return (
     <ul>
       <li>1</li>
