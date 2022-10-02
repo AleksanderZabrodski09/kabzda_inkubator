@@ -3,6 +3,7 @@ import './App.css';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from './components/OnOff/OnOff';
 import Accordion from './components/Accordion/Accordion';
+import {UnControlledOnOff} from './components/UnControlledOnOff/UnControlledOnOff';
 
 
 function Hello() {
@@ -19,10 +20,11 @@ function App() {
 
 let [ratingValue, setRatingValue]=useState<RatingValueType>(4)
   let [collapsed, setCollapsed]=useState(false)
+  let [on, setOn]=useState(false)
   return (
     <div>
         <OnOff/>
-        <OnOff/>
+        <UnControlledOnOff on={on}  setOn={setOn}/>
 
       <Rating value={ratingValue} onClick={setRatingValue}
       />
