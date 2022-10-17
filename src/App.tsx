@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
-import {OnOff} from './components/OnOff/OnOff';
-import Accordion from './components/Accordion/Accordion';
 import {UnControlledOnOff} from './components/UnControlledOnOff/UnControlledOnOff';
+import Accordion from './components/Accordion/Accordion';
+import {OnOff} from './components/OnOff/OnOff';
+import {UnControlledRating} from './components/UnControlledRating/UnControlledRating';
+import UnControlledAccordion from './components/UnControlledAccordion/UnControlledAccordion';
 
 
 function Hello() {
@@ -18,29 +20,25 @@ function App() {
   //полезное что-то
   // обязана вернуть JSX
 
-let [ratingValue, setRatingValue]=useState<RatingValueType>(4)
-  let [collapsed, setCollapsed]=useState(false)
-  let [on, setOn]=useState(false)
+  let [ratingValue, setRatingValue] = useState<RatingValueType>(4)
+  let [collapsed, setCollapsed] = useState(false)
+  let [on, setOn] = useState(false)
   return (
     <div>
-        <OnOff/>
-        <UnControlledOnOff on={on}  setOn={setOn}/>
-
+      <UnControlledOnOff/>
+      <OnOff on={on} setOn={setOn}/>
       <Rating value={ratingValue} onClick={setRatingValue}
       />
-      <Accordion titleValue={"Menu"} collapsed={collapsed} onClick={()=>setCollapsed(!collapsed)}/>
+      <Accordion titleValue={"Menu"} collapsed={collapsed} onClick={() => setCollapsed(!collapsed)}/>
 
-      {/*<UnControlledAccordion titleValue={"Menu"} />*/}
-      {/*<UnControlledRating />*/}
-
+      <UnControlledAccordion titleValue={"Menu"} />
+      <UnControlledRating />
       {/*<UnControlledAccordion titleValue={"Users"} collapsed={false}/>*/}
       {/*<UnControlledRating value={0}/>*/}
       {/*<UnControlledRating value={1}/>*/}
       {/*<UnControlledRating value={3}/>*/}
       {/*<UnControlledRating value={4}/>*/}
       {/*<UnControlledRating value={5}/>*/}
-
-
     </div>
   );
 }
