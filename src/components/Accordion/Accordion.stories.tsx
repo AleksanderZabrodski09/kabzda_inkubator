@@ -41,6 +41,13 @@ MenuCollapsedMode.args = {
   collapsed: true,
 
 }
+// export const MenuCollapsedMode: ComponentStory<typeof Accordion> = () => <Accordion titleValue={'--Menu--'}
+// collapsed={true}
+// onClick={callBack}
+// />;
+
+
+
 export const UsersCollapsedMode = Template.bind({})
 UsersCollapsedMode.args = {
   ...callbackProps,
@@ -49,8 +56,6 @@ UsersCollapsedMode.args = {
 
 }
 
-
-// export const MenuCollapsedMode: ComponentStory<typeof Accordion> = () => <Accordion titleValue={'--Menu--'} collapsed={true} onClick={callBack}/>;
 // export const UsersCollapsedMode: ComponentStory<typeof Accordion> = () => <Accordion titleValue={'--Users--'} collapsed={false} onClick={callBack}/>;
 
 export const AccordionChanging: ComponentStory<typeof Accordion> = (args) => {

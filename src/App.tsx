@@ -25,14 +25,20 @@ function App() {
   let [on, setOn] = useState(false)
   return (
     <div>
-      <UnControlledOnOff/>
+      <UnControlledOnOff setOn={setOn}/>
+
       <OnOff on={on} setOn={setOn}/>
-      <Rating value={ratingValue} onClick={setRatingValue}
+
+      <Rating value={ratingValue} onClick={setRatingValue}/>
+
+      <Accordion titleValue={"Menu"}
+                 collapsed={collapsed}
+                 onClick={() => setCollapsed(!collapsed)}
       />
-      <Accordion titleValue={"Menu"} collapsed={collapsed} onClick={() => setCollapsed(!collapsed)}/>
 
       <UnControlledAccordion titleValue={"Menu"} />
-      <UnControlledRating />
+      <UnControlledRating onChange={()=>{}}/>
+
       {/*<UnControlledAccordion titleValue={"Users"} collapsed={false}/>*/}
       {/*<UnControlledRating value={0}/>*/}
       {/*<UnControlledRating value={1}/>*/}

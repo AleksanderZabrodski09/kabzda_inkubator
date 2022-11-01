@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import App from '../../App';
 
-type PropsType = {
+export type PropsType = {
   setOn: (on:boolean)=>void
   defaultOn?:boolean
 }

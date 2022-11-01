@@ -19,7 +19,7 @@ const callBack= action('on or off clicked')
 
 export const onMode: ComponentStory<typeof UnControlledOnOff> = () => <UnControlledOnOff defaultOn={true} setOn={callBack}/>;
 export const offMode: ComponentStory<typeof UnControlledOnOff> = () => <UnControlledOnOff defaultOn={false} setOn={callBack}/>;
-export const BugMode=()=><div>Unsync when change defaultValue when already rendered</div>
+// export const BugMode=()=><div>Unsync when change defaultValue when already rendered</div>
 
 // export const UnControlledOnOffChanging: ComponentStory<typeof UnControlledOnOff> = () => {
 //   // const [mode, setMode]=useState<boolean>(true)

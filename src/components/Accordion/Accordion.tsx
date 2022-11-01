@@ -7,7 +7,7 @@ export type AccordionPropsType = {
   /**
    * optional color of header text
    */
-  color:string
+  color?:string
 }
 
 function Accordion(props: AccordionPropsType) {
